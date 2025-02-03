@@ -1,4 +1,4 @@
-name: Deploy to IPFS via Pinata
+name: Deploy to IPFS via Pinataa
 
 on:
   push:
