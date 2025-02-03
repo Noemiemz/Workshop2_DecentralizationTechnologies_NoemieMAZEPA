@@ -21,7 +21,7 @@ jobs:
         with:
           pinata_api_key: ${{ secrets.PINATA_API_KEY }}  
           pinata_api_secret: ${{ secrets.PINATA_API_SECRET }} 
-          file_path: ./main.html 
+          file_path: ./
           pinata_jwt: ${{ secrets.PINATA_JWT }}  
 
 
