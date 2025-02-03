@@ -1,2 +1,27 @@
-- name: IPFS Pinata deploy GitHub action
-  uses: popovoleksandr/ipfs-pinata-deploy-action@v1.6.3
+name: Deploy to IPFS via Pinata
+
+on:
+  push:
+    branches:
+      - main 
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: IPFS Pinata deploy GitHub action
+        uses: popovoleksandr/ipfs-pinata-deploy-action@v1.6.3
+        with:
+          pinata_api_key: ${{ secrets.PINATA_API_KEY }}  
+          pinata_api_secret: ${{ secrets.PINATA_API_SECRET }} 
+          file_path: ./main.html 
+          pinata_jwt: ${{ secrets.PINATA_JWT }}  
+
+
