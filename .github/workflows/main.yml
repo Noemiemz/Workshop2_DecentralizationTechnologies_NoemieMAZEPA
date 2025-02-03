@@ -16,9 +16,11 @@ jobs:
       - name: IPFS Pinata deploy GitHub action
         uses: popovoleksandr/ipfs-pinata-deploy-action@v1.6.3
         with:
-          pinata_api_key: ${{ secrets.PINATA_API_KEY }}  
-          pinata_api_secret: ${{ secrets.PINATA_API_SECRET }} 
-          file_path: ./
-          pinata_jwt: ${{ secrets.PINATA_JWT }}  
+          path: ./
+          pin-name: "my-decentralized-website" 
+          pinata-api-key: ${{ secrets.PINATA_API_KEY }} 
+          pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
+          remove-old: true 
+          verbose: true  
 
 
