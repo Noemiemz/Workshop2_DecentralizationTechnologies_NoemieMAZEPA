@@ -1,4 +1,4 @@
-name: Deploy to IPFS via Pinataa
+name: Deploy to IPFS via Pinata
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         with:
           pinata_api_key: ${{ secrets.PINATA_API_KEY }}  
           pinata_api_secret: ${{ secrets.PINATA_API_SECRET }} 
-          file_path: ./
+          file_path: ./main.html
           pinata_jwt: ${{ secrets.PINATA_JWT }}  
 
 
