@@ -27,6 +27,6 @@ jobs:
 
       - name: Get IPFS Public Gateway URL
         run:
-          echo "Website deployed to IPFS, here is the link to access it:${{ steps.deploy.outputs.hash}}"
+          echo "Website deployed to IPFS, here is the link to access it:🔗 https://ipfs.io/ipfs/${{ steps.deploy.outputs.hash}}/"
           
         
